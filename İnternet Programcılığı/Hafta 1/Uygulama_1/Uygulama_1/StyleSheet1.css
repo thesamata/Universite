@@ -1,0 +1,139 @@
+﻿body {
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, #9e4cff, #5416a7, #3b4364, #7c468a);
+  background-size: 400% 400%;
+  animation: change 100s ease-in-out infinite;
+}
+@keyframes change {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.form {
+  display: flow;
+  background-color: #242238;
+  padding: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 20px;
+  transition: 0.25s;
+}
+.form h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.form input[type="text"],
+.form input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #9e4cff;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.form input[type="text"]:focus,
+.form input[type="password"]:focus {
+  width: 280px;
+  border-color: #4a2cd1;
+}
+.form input[type="submit"] {
+  border: 0;
+  background: none;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid #9e4cff;
+  padding: 14px 30px;
+  width: 100px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.form input[type="submit"]:hover {
+  background-color: #9e4cff;
+  border-color: #4a2cd1;
+  cursor: pointer;
+  width: 150px;
+}
+
+.sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sm a {
+  display: inline-block;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #9e4cff;
+  margin: 0 16px;
+  transition: 0.4s linear;
+  position: relative;
+}
+.sm a::before,
+.sm a::after {
+  content: "" "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.4s linear;
+}
+.sm a:hover {
+  transform: scale(0.8);
+  color: #5416a7;
+}
+.sm a:hover::before {
+  border-left: 4px solid;
+  border-right: 4px solid;
+  transform: skewX(20deg);
+}
+.sm a:hover::after {
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  transform: skewY(-20deg);
+}
+@media screen and (max-width: 1000px) {
+  .sm a {
+    width: 95%;
+    margin: 0;
+  }
+
+  .form input[type="submit"] {
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 730px) {
+    .form input[type="submit"] {
+      margin: 0px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .form {
+      padding: 10%;
+    }
+  }
+}
