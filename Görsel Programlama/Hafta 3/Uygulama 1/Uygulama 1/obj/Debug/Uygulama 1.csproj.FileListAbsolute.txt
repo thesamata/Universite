@@ -1,0 +1,11 @@
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\bin\Debug\Uygulama 1.exe.config
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\bin\Debug\Uygulama 1.exe
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\bin\Debug\Uygulama 1.pdb
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama 1.csproj.AssemblyReference.cache
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama_1.Form1.resources
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama_1.Properties.Resources.resources
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama 1.csproj.GenerateResource.cache
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama 1.csproj.CoreCompileInputs.cache
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama 1.exe
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama 1.pdb
+E:\Desktop\Universite\2.Sınıf\1.Donem\Gorsel_prog\Hafta 3\Uygulama 1\Uygulama 1\obj\Debug\Uygulama_1.FormAyarlar.resources
