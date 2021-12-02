@@ -73,7 +73,7 @@
           </td>
         </tr>
         <tr>
-          <td style="width: 461px">Kaydet
+          <td style="width: 461px">Kaydet 
           <td style="padding-bottom: 2px; width: 387px">
             <asp:Button ID="btnKaydet" placeholder="Kaydet" runat="server" Text="Kaydet" OnClick="btnKaydet_Click"
               style="height: 26px" ValidationGroup="RqfSatci" />
