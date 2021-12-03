@@ -27,12 +27,13 @@ namespace Uygulama_1
         private int myPoint;
 
         private int Count;
+
         List<Image> listDice = new List<Image>();
 
         private  Random randomNum = new Random();
 
         private  Random ranAnim = new Random();
-
+        //GAME STATUS
         private enum STATUS
         {
             IDLE,
@@ -60,7 +61,7 @@ namespace Uygulama_1
             gameStatus = STATUS.IDLE;
             Count = 0;
             StopBTN.Enabled = false;
-
+            // Description of pictures
             listDice.Add(Properties.Resources.Dice1);
             listDice.Add(Properties.Resources.Dice2);
             listDice.Add(Properties.Resources.Dice3);
@@ -71,6 +72,7 @@ namespace Uygulama_1
 
         private void StartBTN_Click(object sender, EventArgs e)
         {
+            //Text Clearing and Reset Everything
             TextArea.Text = "";
             gameStatus = STATUS.CONTINUE;
             gameCounter = 0;
@@ -83,10 +85,11 @@ namespace Uygulama_1
 
             Count = 0;
 
-            //First Dice
+            //First Dice Roll
             TextArea.Text = TextArea.Text + "\n\r" + "First Roll \n\r";
             sumOfDice = RollDice();
 
+            //Winning and Losing control.
             if ((DiceNames) sumOfDice == DiceNames.Yo_Leven)
             {
                 gameStatus = STATUS.WON;
@@ -109,6 +112,7 @@ namespace Uygulama_1
 
         private void TimerGame_Tick(object sender, EventArgs e)
         {
+            //Data and game scores written in the text section.
             label1.Text = "Point " + myPoint.ToString();
             label2.Text = "Roll the Dice " + Count.ToString();
             gameCounter++;
@@ -121,6 +125,7 @@ namespace Uygulama_1
                 sumOfDice = RollDice();
 
                 //Game Tornament
+                //Winning and Losing control.
                 if (sumOfDice == myPoint)
                     gameStatus = STATUS.WON;
                 else if (sumOfDice == (int)DiceNames.Seven)
@@ -142,6 +147,7 @@ namespace Uygulama_1
             }
             else if ((gameCounter % 10) >=4)
             {
+                //Dice animation worksheet
                 RandDiceAnim();
             }
                   
@@ -149,6 +155,7 @@ namespace Uygulama_1
 
         private int RandDiceAnim()
         {
+            //The pictures of the dice arrive in a random fashion.
             int anim = randomNum.Next(1, 7);
             int anim2 = randomNum.Next(1, 7);
             if (anim == 1)
@@ -180,6 +187,7 @@ namespace Uygulama_1
 
         private void StopGame()
         {
+            //Game and timer all stop
             StartBTN.Enabled = true;
             StopBTN.Enabled = false;
             TimerGame.Stop();
@@ -192,6 +200,7 @@ namespace Uygulama_1
 
         private int RollDice()
         {
+            //Random rolling of the dice. 
             Count++;
             int Dice1 = randomNum.Next(1, 7);
             int Dice2 = randomNum.Next(1, 7);
@@ -206,7 +215,7 @@ namespace Uygulama_1
                  "\r Total : " +
                 (Dice1 + Dice2).ToString()+
                 "\n\r";
-
+            //Displaying the picture of the incoming dice.
             if (Dice1 == 1)
                 pictureBox1.Image = Properties.Resources.Dice1;
             else if (Dice1 == 2)
