@@ -25,7 +25,7 @@ import javax.swing.JTextField;
 
 public class MainGUIAllFrame extends JFrame {
   //West Panel
-  private final	JLabel space;
+  private final JLabel space;
   private final JButton listDepartButton;
   private final JButton updateUserButton;
   private final JButton deletUserButton;
@@ -83,7 +83,6 @@ public class MainGUIAllFrame extends JFrame {
   private final JRadioButton femaleRButton;
   private final JRadioButton otherRButton;
 
-  
   private final ButtonGroup radioGroup;
   private final JButton sendButton;
 
@@ -139,7 +138,7 @@ public class MainGUIAllFrame extends JFrame {
     westPanel.setLayout(layout3);
 
     addUserButton = new JButton("Add User");
-    space = new JLabel(""); 
+    space = new JLabel("");
     listUserButton = new JButton("List All User");
     listDepartButton = new JButton("List By Department");
     updateUserButton = new JButton("User Update");
