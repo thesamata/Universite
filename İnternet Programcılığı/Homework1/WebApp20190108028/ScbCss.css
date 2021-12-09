@@ -1,0 +1,189 @@
+﻿body {
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, #9e4cff, #5416a7, #3b4364, #7c468a);
+  background-size: 400% 400%;
+  animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.form {
+  color: white;
+  display: flow;
+  background-color: #242238;
+  padding: 10px;
+  padding-left: 55px;
+  padding-right: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  transition: 0.25s;
+}
+
+.form h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+
+.formtext {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 0;
+  background: none;
+  text-align: center;
+  border: 2px solid #9e4cff;
+  padding: 10px 10px;
+  width: 175px;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.formtext:focus {
+  width: 220px;
+  border-color: #4a2cd1;
+}
+
+.form input[type="submit"] {
+  border: 0;
+  background: none;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid #9e4cff;
+  padding: 14px 30px;
+  width: 120px;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #9e4cff;
+  border-color: #4a2cd1;
+  cursor: pointer;
+  width: 150px;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+  display: none;
+}
+
+.label {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+  color: white;
+  font-size: 14px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: flex;
+  cursor: pointer;
+}
+.form input[type="radio"]:checked + label {
+  background-color: blueviolet;
+  padding: 5px 5px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+}
+
+.droplist {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 200px;
+  background: none;
+  margin-left: 20px;
+  border: 2px solid #9e4cff;
+  padding: 10px 30px;
+  display: flex;
+  color: white;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+.droplist:focus {
+  padding: 10px 50px;
+}
+
+.formupload {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: none;
+  text-align: center;
+  border: 2px solid #9e4cff;
+  padding: 10px 10px;
+  width: 175px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+.formupload:hover {
+  width: 220px;
+  border-color: #4a2cd1;
+}
+
+.formtakvim {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+  background: none;
+  text-align: center;
+  border: 2px solid #9e4cff;
+  padding: 10px 10px;
+  width: 175px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.form input[type="checkbox"]:checked + label {
+  background-color: blueviolet;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.5s;
+}
+@media screen and (max-width: 1000px) {
+  .sm a {
+    width: 95%;
+    margin: 0;
+  }
+
+  .form input[type="submit"] {
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 730px) {
+    .form input[type="submit"] {
+      margin: 0px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .form {
+      padding: 10%;
+    }
+  }
+}
