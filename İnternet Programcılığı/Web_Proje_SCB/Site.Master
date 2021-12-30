@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web_Proje_SCB.SiteMaster" %>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head runat="server">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            <%: Page.Title %>
+        </title>
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/bundles/modernizr") %>
+        </asp:PlaceHolder>
+
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </head>
+
+    <body>
+        <form runat="server">
+            <asp:ScriptManager runat="server">
+                <Scripts>
+                    <%--To learn more about bundling scripts in ScriptManager see
+                        https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                        <%--Framework Scripts--%>
+                            <asp:ScriptReference Name="MsAjaxBundle" />
+                            <asp:ScriptReference Name="jquery" />
+                            <asp:ScriptReference Name="bootstrap" />
+                            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/WebForms.js" />
+                            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/WebUIValidation.js" />
+                            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/MenuStandards.js" />
+                            <asp:ScriptReference Name="GridView.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/GridView.js" />
+                            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/DetailsView.js" />
+                            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/TreeView.js" />
+                            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/WebParts.js" />
+                            <asp:ScriptReference Name="Focus.js" Assembly="System.Web"
+                                Path="~/Scripts/WebForms/Focus.js" />
+                            <asp:ScriptReference Name="WebFormsBundle" />
+                            <%--Site Scripts--%>
+                </Scripts>
+            </asp:ScriptManager>
+            <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #673ab7;">
+                <a class="navbar-brand" href="Default.aspx">Quntu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="About.aspx">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Calismalar.aspx">Çalışmalarımız</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Contact.aspx">İletişim</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Basvuru.aspx">Başvuru</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="InsanKaynaklari.aspx">İnsan Kaynaklari</a>
+                            </li>
+                        </ul>
+                        <img style="height: 50px" src="Photos/Logolar/Qlogo.png" />
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #673ab7;">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em"
+                    PathSeparator=" : ">
+                    <CurrentNodeStyle ForeColor="#ffffff" />
+                    <NodeStyle Font-Bold="True" ForeColor="#ffffff" />
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#ffffff" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#ffffff" />
+                </asp:SiteMapPath>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </nav>
+
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - Quntu Works</p>
+                </footer>
+            </div>
+        </form>
+    </body>
+
+    </html>
