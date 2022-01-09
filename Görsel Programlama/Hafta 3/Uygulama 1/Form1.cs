@@ -51,20 +51,18 @@ namespace Uygulama_1
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button1);
 
-            if (cevap == DialogResult.Yes)
+            if (cevap == DialogResult.Abort)
             {
-                textLog.Text = "Evet Seçildi.";
-            } else
-           
+                textLog.Text = "Durdur Seçildi.";
+            }
+            else if (cevap == DialogResult.Ignore)
             {
-                if (cevap == DialogResult.No)
-                {
-                    textLog.Text = "Hayır Seçildi.";
-                }
-                else
-                {
-                    textLog.Text = "Diğer durum oldu.";
-                }
+                textLog.Text = "Yoksay Seçildi.";
+            }
+
+            else if (cevap == DialogResult.Retry)
+            {
+               textLog.Text = "Yeniden dene Seçildi.";             
             }
 
         }
