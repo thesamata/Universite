@@ -319,7 +319,7 @@ public class MainGuiFrame extends JFrame {
       if (m3RButton.isSelected()) Unit = "m3";
       if (kgRButton.isSelected()) Unit = "kg";
       if (
-        TrukcLabel.getText().equals("") ||
+        TruckText.getText().equals("") ||
         nameText.getText().equals("") ||
         packageContText.getText().equals("") ||
         packageSizeText.getText().equals("") ||
