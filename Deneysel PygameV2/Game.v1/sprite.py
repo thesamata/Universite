@@ -3,6 +3,7 @@ from setting import *
 from tilemap import collide_hit_rect
 vec = pg.math.Vector2
 
+
 class Player(pg.sprite.Sprite):
     def __init__(self, game, x, y):
         self.groups = game.all_sprites
@@ -31,7 +32,8 @@ class Player(pg.sprite.Sprite):
 
     def collide_with_walls(self, dir):
         if dir == 'x':
-            hits = pg.sprite.spritecollide(self, self.game.walls, False, collide_hit_rect)
+            hits = pg.sprite.spritecollide(
+                self, self.game.walls, False, collide_hit_rect)
             if hits:
                 if self.vel.x > 0:
                     self.pos.x = hits[0].rect.left - self.hit_rect.width / 2
@@ -40,7 +42,8 @@ class Player(pg.sprite.Sprite):
                 self.vel.x = 0
                 self.hit_rect.centerx = self.pos.x
         if dir == 'y':
-            hits = pg.sprite.spritecollide(self, self.game.walls, False, collide_hit_rect)
+            hits = pg.sprite.spritecollide(
+                self, self.game.walls, False, collide_hit_rect)
             if hits:
                 if self.vel.y > 0:
                     self.pos.y = hits[0].rect.top - self.hit_rect.height / 2
@@ -61,6 +64,7 @@ class Player(pg.sprite.Sprite):
         self.hit_rect.centery = self.pos.y
         self.collide_with_walls('y')
         self.rect.center = self.hit_rect.center
+
 
 class Mob(pg.sprite.Sprite):
     def __init__(self, game, x, y):

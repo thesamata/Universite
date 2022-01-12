@@ -7,6 +7,7 @@ from tilemap import *
 from wall import *
 from mobs import *
 
+
 class Game:
     def __init__(self):
         pg.init()
@@ -20,41 +21,57 @@ class Game:
         self.map = Map(path.join(game_folder, 'map.txt'))
         img_folder = path.join(game_folder, 'image')
 
-        self.mob_img = pg.image.load(path.join(img_folder, MOB_IMG)).convert_alpha()
-        self.player_img = pg.image.load(path.join(img_folder, PLAYER_IMG)).convert_alpha()
+        self.mob_img = pg.image.load(
+            path.join(img_folder, MOB_IMG)).convert_alpha()
+        self.player_img = pg.image.load(
+            path.join(img_folder, PLAYER_IMG)).convert_alpha()
 
-        #floor
-        self.floor_img = pg.image.load(path.join(img_folder, FLOOR_IMG)).convert_alpha()
-        self.floor_img = pg.transform.scale(self.floor_img, (TILESIZE, TILESIZE))
+        # floor
+        self.floor_img = pg.image.load(
+            path.join(img_folder, FLOOR_IMG)).convert_alpha()
+        self.floor_img = pg.transform.scale(
+            self.floor_img, (TILESIZE, TILESIZE))
 
-
-
-        #düzlemler
-        self.wall_img = pg.image.load(path.join(img_folder, WALL_IMG)).convert_alpha()
+        # düzlemler
+        self.wall_img = pg.image.load(
+            path.join(img_folder, WALL_IMG)).convert_alpha()
         self.wall_img = pg.transform.scale(self.wall_img, (TILESIZE, TILESIZE))
 
-        self.wall_down_img = pg.image.load(path.join(img_folder, WALL_DOWN_IMG)).convert_alpha()
-        self.wall_down_img = pg.transform.scale(self.wall_down_img, (TILESIZE, TILESIZE))
+        self.wall_down_img = pg.image.load(
+            path.join(img_folder, WALL_DOWN_IMG)).convert_alpha()
+        self.wall_down_img = pg.transform.scale(
+            self.wall_down_img, (TILESIZE, TILESIZE))
 
-        self.wall_left_img = pg.image.load(path.join(img_folder, WALL_LEFT_IMG)).convert_alpha()
-        self.wall_left_img = pg.transform.scale(self.wall_left_img, (TILESIZE, TILESIZE))
+        self.wall_left_img = pg.image.load(
+            path.join(img_folder, WALL_LEFT_IMG)).convert_alpha()
+        self.wall_left_img = pg.transform.scale(
+            self.wall_left_img, (TILESIZE, TILESIZE))
 
-        self.wall_right_img = pg.image.load(path.join(img_folder, WALL_RIGHT_IMG)).convert_alpha()
-        self.wall_right_img = pg.transform.scale(self.wall_right_img, (TILESIZE, TILESIZE))
+        self.wall_right_img = pg.image.load(
+            path.join(img_folder, WALL_RIGHT_IMG)).convert_alpha()
+        self.wall_right_img = pg.transform.scale(
+            self.wall_right_img, (TILESIZE, TILESIZE))
 
-        #köşeler
-        self.wall_right_corner_img = pg.image.load(path.join(img_folder, WALL_RIGHT_CORNER_IMG)).convert_alpha()
-        self.wall_right_corner_img = pg.transform.scale(self.wall_right_corner_img, (TILESIZE, TILESIZE))
+        # köşeler
+        self.wall_right_corner_img = pg.image.load(
+            path.join(img_folder, WALL_RIGHT_CORNER_IMG)).convert_alpha()
+        self.wall_right_corner_img = pg.transform.scale(
+            self.wall_right_corner_img, (TILESIZE, TILESIZE))
 
-        self.wall_left_corner_img = pg.image.load(path.join(img_folder, WALL_LEFT_CORNER_IMG )).convert_alpha()
-        self.wall_left_corner_img = pg.transform.scale(self.wall_left_corner_img, (TILESIZE, TILESIZE))
+        self.wall_left_corner_img = pg.image.load(
+            path.join(img_folder, WALL_LEFT_CORNER_IMG)).convert_alpha()
+        self.wall_left_corner_img = pg.transform.scale(
+            self.wall_left_corner_img, (TILESIZE, TILESIZE))
 
-        self.wall_right_down_corner_img = pg.image.load(path.join(img_folder, WALL_RIGHT_DOWN_CORNER_IMG)).convert_alpha()
-        self.wall_right_down_corner_img = pg.transform.scale(self.wall_right_down_corner_img, (TILESIZE, TILESIZE))
+        self.wall_right_down_corner_img = pg.image.load(
+            path.join(img_folder, WALL_RIGHT_DOWN_CORNER_IMG)).convert_alpha()
+        self.wall_right_down_corner_img = pg.transform.scale(
+            self.wall_right_down_corner_img, (TILESIZE, TILESIZE))
 
-        self.wall_left_down_corner_img = pg.image.load(path.join(img_folder, WALL_LEFT_DOWN_CORNER_IMG)).convert_alpha()
-        self.wall_left_down_corner_img = pg.transform.scale(self.wall_left_down_corner_img, (TILESIZE, TILESIZE))
-
+        self.wall_left_down_corner_img = pg.image.load(
+            path.join(img_folder, WALL_LEFT_DOWN_CORNER_IMG)).convert_alpha()
+        self.wall_left_down_corner_img = pg.transform.scale(
+            self.wall_left_down_corner_img, (TILESIZE, TILESIZE))
 
     def new(self):
 
@@ -69,23 +86,23 @@ class Game:
                 if tile == '1':
                     Wall(self, col, row)
                 if tile == '9':
-                    FLOOR(self,col,row)
+                    FLOOR(self, col, row)
                 if tile == '0':
-                    Wall_DOWM(self, col, row)    
+                    Wall_DOWM(self, col, row)
                 if tile == '2':
-                    Wall_Left(self,col,row)
+                    Wall_Left(self, col, row)
                 if tile == '3':
-                    Wall_Right(self,col,row) 
+                    Wall_Right(self, col, row)
                 if tile == '4':
-                    Wall_Left_Corner(self,col,row)
+                    Wall_Left_Corner(self, col, row)
                 if tile == '5':
-                    Wall_Right_Corner(self,col,row)
-                if tile == '6' :
-                    Wall_Left_Down_corner(self,col,row)
-                if tile == '7' :
-                    Wall_Right_Down_Corner(self,col,row)     
+                    Wall_Right_Corner(self, col, row)
+                if tile == '6':
+                    Wall_Left_Down_corner(self, col, row)
+                if tile == '7':
+                    Wall_Right_Down_Corner(self, col, row)
                 if tile == 'M':
-                    Mob(self, col, row)    
+                    Mob(self, col, row)
                 if tile == 'P':
                     self.player = Player(self, col, row)
         self.camera = Camera(self.map.width, self.map.height)
@@ -135,6 +152,7 @@ class Game:
 
     def show_go_screen(self):
         pass
+
 
 # create the game object
 g = Game()

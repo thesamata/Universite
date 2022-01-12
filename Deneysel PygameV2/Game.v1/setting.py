@@ -26,16 +26,16 @@ PLAYER_ROT_SPEED = 250
 PLAYER_HIT_RECT = pg.Rect(0, 0, 35, 35)
 PLAYER_IMG = 'player.png'
 
-#mob settings
+# mob settings
 MOB_IMG = 'zombie1.png'
 
 
-#floor
-FLOOR_IMG ='floor_1.png'
+# floor
+FLOOR_IMG = 'floor_1.png'
 
 
-#wall
-WALL_IMG ='wall1.png'
+# wall
+WALL_IMG = 'wall1.png'
 WALL_DOWN_IMG = 'wall2.png'
 WALL_LEFT_IMG = 'wall_left.png'
 WALL_RIGHT_IMG = 'wall_right.png'
