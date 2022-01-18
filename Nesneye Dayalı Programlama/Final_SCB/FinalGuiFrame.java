@@ -1,4 +1,4 @@
-package Fina_SCB;
+package Final_SCB;
 
 //Layout manager
 import java.awt.BorderLayout;
