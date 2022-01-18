@@ -59,9 +59,9 @@ public class MainGuiFrames extends JFrame {
   private final JComboBox<?> deliveryCityComb;
   private final String cityList[] = {
     "",
-    "Ýstanbul",
+    "ï¿½stanbul",
     "Ankara",
-    "Ýzmir",
+    "ï¿½zmir",
     "Adana",
     "Kocaeli",
     "Other",
@@ -330,8 +330,8 @@ public class MainGuiFrames extends JFrame {
     }
   }
 }
-/*     \    /\
-		)  ( ')
-		(  /  )
-SCB   	 \(__)|
+/*     \   /\
+       )  ( ')
+      (  /  )
+SCB    \(__)|
 */

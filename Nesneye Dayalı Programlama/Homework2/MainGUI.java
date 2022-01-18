@@ -1,11 +1,3 @@
-/*---------------------------
-Name: Homework
-File: Homework
------------------------------
-Author: ÞAFAK CAN BAV
-Data:   14.11.2021 13:03:27
-----------------------------*/
-
 package Homework2;
 
 import javax.swing.JFrame;

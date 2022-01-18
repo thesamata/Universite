@@ -377,8 +377,8 @@ public class MainGuiFrame extends JFrame {
     }
   }
 }
-/* \    /\ 
-		)  ( ')
-		(  /  )
-SCB  \(__)|
+/*     \   /\
+       )  ( ')
+      (  /  )
+SCB    \(__)|
 */

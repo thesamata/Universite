@@ -1,11 +1,3 @@
-/*---------------------------
-Name: Homework
-File: Homework
------------------------------
-Author: ÞAFAK CAN BAV
-Data:   09.12.2021 17:35:27
-----------------------------*/
-
 package Homework3;
 
 import javax.swing.JFrame;
@@ -21,8 +13,8 @@ public class MainGui {
   }
 }
 
-/*	 	\   /\
-		)  ( ')
-		(  /  )
-SCB      \(__)|
+/*     \   /\
+       )  ( ')
+      (  /  )
+SCB    \(__)|
 */
