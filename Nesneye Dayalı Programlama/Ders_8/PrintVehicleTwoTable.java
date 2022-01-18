@@ -39,7 +39,7 @@ public class PrintVehicleTwoTable {
 					"VehicleMaster.CustomerName, VehicleMaster.Country, VehicleMaster.DeliveryCity, " + 
 					"VehicleMaster.Description, Status.Status AS StatusDesc FROM VehicleMaster " + 
 					"INNER JOIN Status ON VehicleMaster.Status = Status.Code");
-			
+		
 			
 			selectVehiclesByNo = connection.prepareStatement(
 					"SELECT VehicleMaster.VehicleNo, VehicleMaster.ProdStartDate, VehicleMaster.DeliveryDate," +

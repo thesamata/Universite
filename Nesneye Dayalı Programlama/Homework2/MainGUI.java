@@ -2,7 +2,7 @@
 Name: Homework
 File: Homework
 -----------------------------
-Author: ï¿½AFAK CAN BAV
+Author: ÞAFAK CAN BAV
 Data:   14.11.2021 13:03:27
 ----------------------------*/
 
@@ -16,10 +16,13 @@ public class MainGUI {
     MainGUIAllFrame Frame = new MainGUIAllFrame();
     Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     Frame.setLocation(300, 100);
-    Frame.setSize(700, 500);
+    Frame.setSize(700, 500); 
     Frame.setVisible(true);
   }
 }
+
+
+
 /*     \   /\
        )  ( ')
       (  /  )

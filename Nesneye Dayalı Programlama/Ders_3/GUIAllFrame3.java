@@ -24,7 +24,11 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class GUIAllFrame3 extends JFrame {
-  private final JButton newMailButton;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private final JButton newMailButton;
   private final JButton button2;
   private final JButton button3;
   private final JButton button4;
@@ -44,13 +48,13 @@ public class GUIAllFrame3 extends JFrame {
   private final JRadioButton blackbutton;
   private final JRadioButton bluebutton;
   private final JRadioButton redbutton;
-  private final JComboBox citycombo;
+  private final JComboBox<?> citycombo;
   private final JTextField searchfield;
   private final String cityList[] = {
     "",
-    "ï¿½stanbul",
+    "Ýstanbul",
     "Ankara",
-    "ï¿½zmir",
+    "Ýzmir",
     "Adana",
     "Kocaeli",
   };
@@ -179,7 +183,7 @@ public class GUIAllFrame3 extends JFrame {
     label5.setBounds(10, 80, 150, 25);
     centerPanel.add(label5);
 
-    citycombo = new JComboBox(cityList);
+    citycombo = new JComboBox<Object>(cityList);
     //citycombo.setPreferredSize(new Dimension(150, 25));
     citycombo.setBounds(150, 80, 150, 25);
     centerPanel.add(citycombo);

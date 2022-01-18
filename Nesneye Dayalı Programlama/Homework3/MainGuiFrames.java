@@ -4,9 +4,9 @@ package Homework3;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.FlowLayout;
+
 import java.awt.Font;
-import java.awt.GridLayout;
+
 import java.awt.event.ActionEvent;
 //Handler Classes
 import java.awt.event.ActionListener;
@@ -14,23 +14,26 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.security.interfaces.DSAKeyPairGenerator;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
+
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
+
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class MainGuiFrames extends JFrame {
-  //Search in NorthPanel
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//Search in NorthPanel
   private final JPanel ButtonPanel;
   private final JButton newLogisticsButton;
   private final JButton saveFilCloseButton;

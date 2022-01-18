@@ -42,7 +42,7 @@ public class StringDemo {
 		
 		try {
 			//open file
-			Scanner fileInput = new Scanner(myObj);
+			Scanner fileInput = new Scanner(myObj); 
 			
 			//read file until end of file (marker)
 			while (fileInput.hasNextLine())  //while there is more to read / not reached end of file

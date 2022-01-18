@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -52,11 +51,11 @@ public class MainGuiFrame extends JFrame {
 
       searchLogistic =
         conn.prepareStatement("SELECT * FROM Logistics WHERE TrackNr=?");
-      
+
       updateLogistic =
         conn.prepareStatement(
-        		"UPDATE Logistics SET CustomerName = ?, PackageContent = ?, Size = ?,  Unit = ?, City = ? WHERE TrackNr=?");      			
-      
+          "UPDATE Logistics SET CustomerName = ?, PackageContent = ?, Size = ?,  Unit = ?, City = ? WHERE TrackNr=?"
+        );
     } catch (SQLException e) {
       e.printStackTrace();
       System.exit(0);
@@ -210,7 +209,7 @@ public class MainGuiFrame extends JFrame {
     centerPanel.add(sendButton);
 
     //Events -------------------------------------------------------------------------
-    
+
     NewLogisticRecordHender NewLogicHend = new NewLogisticRecordHender();
     newLogisticsButton.addActionListener(NewLogicHend);
 
@@ -226,24 +225,25 @@ public class MainGuiFrame extends JFrame {
     SubmidButtonHender SubmitHend = new SubmidButtonHender();
     sendButton.addActionListener(SubmitHend);
   }
-	public void Clear() {
-	      //Text Field
-	      TruckText.setText("");
-	      nameText.setText("");
-	      packageContText.setText("");
-	      packageSizeText.setText("");
-	      //Combo Boxes
-	      deliveryCityComb.setSelectedIndex(0);
-	      //RadioButton
-	      radioGroup.clearSelection();
-	  }
+
+  public void Clear() {
+    //Text Field
+    TruckText.setText("");
+    nameText.setText("");
+    packageContText.setText("");
+    packageSizeText.setText("");
+    //Combo Boxes
+    deliveryCityComb.setSelectedIndex(0);
+    //RadioButton
+    radioGroup.clearSelection();
+  }
 
   //CLEAR   -------------------------------------------------------------------------
   public class NewLogisticRecordHender implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent event) {
-    	Clear();
+      Clear();
     }
   }
 
@@ -298,13 +298,13 @@ public class MainGuiFrame extends JFrame {
         JOptionPane.QUESTION_MESSAGE
       );
       if (result == JOptionPane.YES_OPTION) {
-          System.exit(0);
+        System.exit(0);
       } else if (result == JOptionPane.NO_OPTION) {
         JOptionPane.showMessageDialog(
           null,
           "Okey ",
           "Info",
-          getDefaultCloseOperation() 
+          getDefaultCloseOperation()
         );
       }
     }
@@ -330,36 +330,42 @@ public class MainGuiFrame extends JFrame {
         ) System.out.println("Each field must be filled.");
       } else {
         try {
-  	      //Search vehicle number in table
-          searchLogistic.setString(1, TruckText.getText()); 
-          selectResult = searchLogistic.executeQuery(); 
+          //Search vehicle number in table
+          searchLogistic.setString(1, TruckText.getText());
+          selectResult = searchLogistic.executeQuery();
           //UPDATE row If there is a row returning from SELECT statement
           if (selectResult.next()) { //is there any row returning from SELECT
             //Prepare SQL Statement = Write the values for ?
-              updateLogistic.setString(1, nameText.getText());
-              updateLogistic.setString(2, packageContText.getText());
-              updateLogistic.setString(3, packageSizeText.getText());
-              updateLogistic.setString(4, Unit);
-              updateLogistic.setString(5, (String) deliveryCityComb.getSelectedItem());
-              updateLogistic.setString(6, TruckText.getText());
+            updateLogistic.setString(1, nameText.getText());
+            updateLogistic.setString(2, packageContText.getText());
+            updateLogistic.setString(3, packageSizeText.getText());
+            updateLogistic.setString(4, Unit);
+            updateLogistic.setString(
+              5,
+              (String) deliveryCityComb.getSelectedItem()
+            );
+            updateLogistic.setString(6, TruckText.getText());
             System.out.println("Veri Güncellendi");
             //update the entry
             //Execution
             updateLogistic.execute();
             conn.close();
             //Prepare SQL Statement = Write the values for ?
-          	} else {      
+          } else {
             //INSERT if no data returned from SELECT
             insertLogistic.setString(1, TruckText.getText());
             insertLogistic.setString(2, nameText.getText());
             insertLogistic.setString(3, packageContText.getText());
             insertLogistic.setString(4, packageSizeText.getText());
             insertLogistic.setString(5, Unit);
-            insertLogistic.setString(6, (String) deliveryCityComb.getSelectedItem()  );  
+            insertLogistic.setString(
+              6,
+              (String) deliveryCityComb.getSelectedItem()
+            );
             System.out.println("Veri Yolladandı");
             //insert the new entry
             //Execution
-            insertLogistic.execute(); 
+            insertLogistic.execute();
             conn.close();
             Clear();
           }
@@ -371,8 +377,8 @@ public class MainGuiFrame extends JFrame {
     }
   }
 }
-/*     \    /\ 
+/* \    /\ 
 		)  ( ')
 		(  /  )
-SCB   	 \(__)|
+SCB  \(__)|
 */

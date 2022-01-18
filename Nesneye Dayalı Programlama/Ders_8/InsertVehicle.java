@@ -24,36 +24,29 @@ public class InsertVehicle {
       String password = "clvr1212";
       String dbName = "BIP2007_2021";
       String URL = "jdbc:sqlserver://" + serverAddr + ";databaseName=" + dbName;
-
+ 
       //connection
       conn = DriverManager.getConnection(URL, UserName, password);
 
       insertVehicle =
         conn.prepareStatement(
-          "INSERT INTO VehicleMaster " +
-          "(VehicleNo, ProdStartDate, VStatus, DeliveryDate, CustomerName, Country, DeliveryCity, VDescription) " +
-          "VALUES (?, ?, ?, ?, ?, ?, ? , ?) "
-        );
-
-      updateVehicle =
-        conn.prepareStatement(
-          "UPDATE VehicleMaster SET " +
-          "VStatus=?, DeliveryDate=?, CustomerName=?, DeliveryCity=?, VDescription=? " +
-          "WHERE VehicleNo=?"
+          "INSERT INTO Logistics " +
+          "(TrackNr, CustomerName, PackageContent, Size, Unit, City) " +
+          "VALUES (?, ?, ?, ?, ?, ?) "
         );
 
       searchVehicle =
-        conn.prepareStatement("SELECT * FROM VehicleMaster WHERE VehicleNo=?");
+        conn.prepareStatement("SELECT * FROM Logistics WHERE VehicleNo=?");
 
       deleteVehicle =
-        conn.prepareStatement("DELETE FROM VehicleMaster WHERE VehicleNo=?");
+        conn.prepareStatement("DELETE FROM Logistics WHERE VehicleNo=?");
     } catch (SQLException e) {
       e.printStackTrace();
       System.exit(1);
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(String args) {
     String fileName = "C:\\Users\\Aysegul\\Desktop\\BIP2007\\VehicleData.txt";
     String v1;
     int result = 0;
